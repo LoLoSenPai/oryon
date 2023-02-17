@@ -1,0 +1,17 @@
+.nav-top {
+    margin: 25px auto 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border-radius: 3px;
+    padding: 0px 20px;
+}
+
+.nav-top a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #151b22;
+    padding: 20px 20px;
+}
