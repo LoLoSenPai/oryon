@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Degen Dummies",
+    "bannerImgSrc": "./images/img1.jpg",
+    "logoImgSrc": "./images/dd-logo.jpg",
+    "link": "/collections/degen_dummies",
+    "previewImgSrc": "./images/18751.png"
+  },
+  {
+    "title": "Famous Fox Federation",
+    "bannerImgSrc": "./images/img2.jpg",
+    "logoImgSrc": "./images/fff-logo.jpg",
+    "link": "/collections/famous_fox_federation",
+    "previewImgSrc": "./images/27131.png"
+  },
+  {
+    "title": "Neo Labs",
+    "bannerImgSrc": "./images/img3.jpg",
+    "logoImgSrc": "./images/nh-logo.png",
+    "link": "/collections/neo_hunters",
+    "previewImgSrc": "./images/nft-nh.png"
+  },
+  {
+    "title": "RetroGoons",
+    "bannerImgSrc": "./images/img4.jpg",
+    "logoImgSrc": "./images/rg-logo.jpg",
+    "link": "/collections/retro_goons",
+    "previewImgSrc": "./images/retrogoon1.png"
+  }
+]

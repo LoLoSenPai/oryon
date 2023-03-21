@@ -1,54 +1,53 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Footer.css";
+import myLogo from "../../images/Logo-SVG.svg";
 
-export default function Footer() {
 
-  const bubbles = [];
-  for (let i = 0; i < 128; i++) {
-    bubbles.push(
-      <div
-        className="bubble"
-        key={i}
-        style={{
-          "--size": `${2 + Math.random() * 4}rem`,
-          "--distance": `${6 + Math.random() * 4}rem`,
-          "--position": `${-5 + Math.random() * 110}%`,
-          "--time": `${2 + Math.random() * 2}s`,
-          "--delay": `${-1 * (2 + Math.random() * 2)}s`,
-        }}
-      />
-    )};
+const Footer = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Mettre ici le code pour l'envoi de l'email promotionnel
+  }
+  const imgUrl = `${myLogo}?${new Date().getTime()}`;
 
   return (
-    <div className="main">
-      <div className="footer">
-        <div class="container">
-          <a href="https://discord.gg/fRgWtfj2wd" target="_blank" rel="noreferrer"><i class="fa-brands fa-discord discord"></i></a>
-          <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter twitter"></i></a>
-          <a href="https://www.instagram.com/loic_dlugosz" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram instagram"></i></a>
-        </div>
-        <div className="bubbles">
-          {bubbles}
+    <footer>
+      <div className="footer-container">
+        <div className="row">
+          <div className="col col-left">
+            <img className='logo-footer' src={imgUrl} alt="logo" />
+            <p>&copy; Oryon co.</p>
+            <p>All rights reserved</p>
+            <div className="social-icons partner-icon">
+              <a href="https://discord.gg/fRgWtfj2wd" target="_blank" rel="noreferrer"><i className="fab fa-discord discord"></i></a>
+              <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+            </div>
+          </div>
+          <div className="col col-right">
+            <ul>
+              <li><a href="https://twitter.com/OryonMerch">Privacy policy</a></li>
+              <li><a href="https://twitter.com/OryonMerch">Shipping policy</a></li>
+              <li><a href="https://twitter.com/OryonMerch">Terms and conditions</a></li>
+            </ul>
+          </div>
+          <div className="col col-bottom">
+            <h3>Get our latest updates!</h3>
+            <form onSubmit={handleSubmit}>
+              <input type="email" placeholder="your@email.com" value={email} onChange={handleEmailChange} />
+              <button className='register-btn' type="submit">Join</button>
+            </form>
+          </div>
         </div>
       </div>
-      <svg style={{ position: "fixed", top: "100vh" }}>
-        <defs>
-          <filter id="blob">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="blob"
-            />
-          </filter>
-        </defs>
-      </svg>
-    </div>
+    </footer>
   );
 }
 
+export default Footer;

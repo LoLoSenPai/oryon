@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../../Components/Footer/Footer';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,14 +10,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="global-container">
+    <section className="global-accordion-container">
       <div class="accordion container">
         <div class="accordion__container">
           {[
             {
               title: "Who is Oryon Merch?",
               description:
-                "An accordion always contains the category title, an expanded and a collapsed state, an icon indicating expansion, and the spacing between them."
+                "We are a group of NFTs Lovers, Alpha callers, and many more..."
             },
             {
               title: "What is Oryon Merch?",
@@ -48,6 +49,7 @@ const Contact = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

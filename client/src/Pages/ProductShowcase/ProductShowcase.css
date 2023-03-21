@@ -1,27 +1,64 @@
+
+:root {
+  /* palette */
+  --main-white: #ffffff;
+  --shade-white: #f5f5f5;
+  --main-yellow: #ffefdd;
+  --main-purple: #5f4aff;
+  --main-gray: #6b6d70;
+  --main-black: #151b22;
+
+  /* Fonts */
+  --base-font: Open sans, sans-serif;
+  --title-font: Merriweather, serif;
+
+  /* Font-size */
+  --text-sm: 1.4rem;
+  --text-price: 1.5rem;
+  --text-price-xl: 2.1rem;
+  --text-base: 1.6rem;
+  --text-base-xl: 2.2em;
+  --text-body-sm: 0.9rem;
+  --text-body: 1.8rem;
+  --text-body-xl: 2.8rem;
+  --text-cat-sm: 1.8rem;
+  --text-cat: 2.4rem;
+  --text-cat-xl: 3.3rem;
+  --text-title-sm: 2.3rem;
+  --text-title: 3.2rem;
+  --text-title-xl: 4.2rem;
+  --text-main-title-sm: 5.9rem;
+  --text-main-title: 8.6rem;
+  --text-main-title-xl: 10rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+.global-product-container {
+    padding-top: 9rem;
+}
+
 .showcase {
     width: 100%;
-    max-width: 700px;
+    width: 70rem;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 3rem 0;
     display: flex; 
     justify-content: center;
     align-items: flex-start;
- 
 }
 
-.container-img-showcase{
-    width: 300px;
-    height: 500px;
-    margin: 0 20px;
-}
 
 .container-img-showcase {
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
-    
-    border: 5px solid #333;
+    width: 30rem;
+    height: 50rem;
+    margin: 0 2rem;
+    border: 0.5rem solid #333;
     border-radius: 5px;
 }
 
@@ -33,36 +70,50 @@
 }
 
 .product-infos {
-    width: 400px;
-    /* background: red; */
+    width: 40rem;
     padding: 0 20px;
 }
 .product-infos h2 {
-    margin-bottom: 5px;
-    font-size: 35px;
+    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
 }
 .product-infos p {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 .product-infos label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 .product-infos input {
     display: block;
-    width: 75px;
-    padding: 10px;
+    width: 7.5rem;
+    padding: 1rem;
     margin: 0px;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .product-infos form button {
-    padding: 12px 10px;
-    font-size: 18px;
-    margin: 20px 0px 20px;
+    padding: 1.2rem 1rem;
+    font-size: 1.8rem;
+    margin: 2rem 0 2rem;
 }
 form button {
     display: block;
     cursor: pointer;
+}
+.add-to-cart-btn {
+    background: #5f4aff3b;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.2px);
+    -webkit-backdrop-filter: blur(14.2px);
+}
+
+@media (max-width: 426px) {
+    .showcase {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
 }

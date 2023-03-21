@@ -16,9 +16,9 @@ export default function FloatingCart() {
   return (
     <Link to="/shoppingCart">
       <div className="floating-cart">
-        <p>Votre Panier</p>
+        {/* <p>Your cart</p> */}
         <div className="img-notif-container">
-          <img src={cartIcon} alt="icône cadi" />
+          <img className="cart-icon"  src={cartIcon} alt="icône cadi" />
           <span className="notif">{totalItems}</span>
         </div>
       </div>

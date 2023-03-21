@@ -1,14 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import './Home.css'
-import gsap from 'gsap'
-import Products from '../../Pages/Products/Products'
-import CustomProductsCard from '../../Components/CustomProductsCard/CustomProductsCard'
-import imgHomeShop from '../../Images/3D-Logo.png'
-import image1 from '../../Images/2713.png'
-import image2 from '../../Images/1875.jpeg'
-import image3 from '../../Images/retrogoon.png'
-import image4 from '../../Images/jikan.png'
-import image5 from '../../Images/5215.png';
+import imgHomeShop from '../../images/3D-Logo.png'
+import bannerAd from './Soon-image.png'
+import bannerAdMobile from './Soon-image-mobile.png'
+import Footer from '../../Components/Footer/Footer';
 
 
 function Home() {
@@ -17,53 +12,23 @@ function Home() {
     document.querySelector('.banner-r img').classList.add('show');
   }, 1000);
 
-  const items = useRef(null)
-
-  useEffect(() => {
-    items.current = document.querySelectorAll('.item')
-
-    const expand = (item, i) => {
-      items.current.forEach((it, ind) => {
-        if (i === ind) return
-        it.clicked = false
-      })
-      gsap.to(items.current, {
-        width: item.clicked ? '15vw' : '8vw',
-        duration: 2,
-        ease: 'elastic(1, .6)'
-      })
-    
-      item.clicked = !item.clicked
-      gsap.to(item, {
-        width: item.clicked ? '42vw' : '15vw',
-        duration: 2.5,
-        ease: 'elastic(1, .3)'
-      })
-    }
-
-    items.current.forEach((item, i) => {
-      item.clicked = false
-      item.addEventListener('click', () => expand(item, i))
-    })
-  }, [])
-
-
   return (
-    <div className="global-container">
+    <div className="global-home-container">
       <div className="hero-banner">
         <div className="banner-l">
-          <h2>Bring your NFTs to life</h2>
+          <h1>Bring your NFTs to life</h1>
+          <hr className='separation' />
           <p>
             Get customized merchandise with your favorite NFT thanks to our all-in-one platform. We take care of everything.
           </p>
           <ul>
-            <li>Easy</li>
-            <li>Fast</li>
-            <li>Best Quality</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Easy</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Fast</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Best Quality</li>
           </ul>
           <div class="button-l">
             <a href='../Collections'>
-              <button class="btn">Start Now</button>
+              <button class="btn-hero-banner">Start Now</button>
             </a>
           </div>
         </div>
@@ -71,20 +36,95 @@ function Home() {
           <img className="hero-right" src={imgHomeShop} alt="accueil shop" />
         </div>
       </div>
-      <div className="accordeon">
-        <div className="group">
-          <div className="item" style={{backgroundImage: `url(${image1})`}}></div>
-          <div className="item" style={{backgroundImage: `url(${image2})`}}></div>
-          <div className="item" style={{backgroundImage: `url(${image3})`}}></div>
-          <div className="item" style={{backgroundImage: `url(${image4})`}}></div>
-          <div className="item" style={{backgroundImage: `url(${image5})`}}></div>
+      <div className="partner-banner">
+        <div className="banner-title">
+          <h2>Large projects trust us</h2>
+        </div>
+        <div className="partner-container">
+          <div className="large-project partner-icon">
+            <img src="./images/logo-dd.png" alt="" />
+            <h3>Degen Dummies</h3>
+            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+          <div className="large-project partner-icon">
+            <img src="./images/logo-gkd.png" alt="" />
+            <h3>Ghost Kid DAO</h3>
+            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+          <div className="large-project partner-icon">
+            <img src="./images/logo-nh.png" alt="" />
+            <h3>Neo Labs</h3>
+            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+          <div className="large-project partner-icon">
+            <img src="./images/logo-yt.png" alt="" />
+            <h3>Yeah Tigers</h3>
+            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+        </div>
+        <div className="banner-title banner-title-bottom">
+          <p>More than<span> 140 000 </span>followers combined</p>
         </div>
       </div>
-      <CustomProductsCard />
-      <div className="featured-products">
-        <h2>Custom Products</h2>
-        <Products />
+      <div className="banner-announce">
+        <img className="coming-soon" src={bannerAd} alt="coming-soon banner" />
+        <img className="coming-soon-mobile" src={bannerAdMobile} alt="coming-soon-mobile banner" />
       </div>
+      <div className="custom-products">
+        <div className="banner-title title-custom-products">
+          <h2>Custom products</h2>
+        </div>
+        <div className="custom-products-container">
+          <div className="custom-product">
+            <img src="./images/section-clothes.png" alt="" />
+            <h3>Clothes</h3>
+          </div>
+          <div className="custom-product">
+            <img src="./images/section-access.jpg" alt="" />
+            <h3>Accessories</h3>
+          </div>
+          <div className="custom-product">
+            <img src="./images/section-home.jpg" alt="" />
+            <h3>Home style</h3>
+          </div>
+        </div>
+      </div>
+      <div className="featured-products">
+        <div className="banner-title title-featured-products">
+          <h2>Featured products</h2>
+        </div>
+        <div className="featured-products-container">
+          <div className="featured-product">
+            <img src="./images/NH1-1.png" alt="" />
+            <h4>Hoodie Neo Hunter</h4>
+            <p>
+              From USD 19.95 $
+            </p>
+          </div>
+          <div className="featured-product">
+            <img src="./images/hoodie-photo.png" alt="" />
+            <h4>T-shirt Claynosaure</h4>
+            <p>
+              From USD 19.95 $
+            </p>
+          </div>
+          <div className="featured-product">
+            <img src="./images/shirt-photo.png" alt="" />
+            <h4>Hat Moon Bird</h4>
+            <p>
+              From USD 19.95 $
+            </p>
+          </div>
+          <div className="featured-product">
+            <img src="./images/hoodie-photo.png" alt="" />
+            <h4>Mug Doge</h4>
+            <p>
+              From USD 19.95 $
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   )
 }

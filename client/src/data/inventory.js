@@ -22,6 +22,30 @@ import { v4 as uuidv4 } from "uuid";
     description: "A fucking awesome Custom y00ts h00die",
     id: uuidv4(),
   },
+  {
+    title: "Custom y00ts T-shir",
+    price: 22.99,
+    img: "5215",
+    description: "An insane Custom y00ts h00die",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
+    id: uuidv4(),
+  },
+  {
+    title: "Custom y00ts T-shi",
+    price: 22.99,
+    img: "retrogoon",
+    description: "An insane Custom y00ts h00die",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
+    id: uuidv4(),
+  },
+  {
+    title: "Custom y00ts T-sh",
+    price: 22.99,
+    img: "logo-dd",
+    description: "An insane Custom y00ts h00die",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
+    id: uuidv4(),
+  },
 ];
 
 export default inventory;

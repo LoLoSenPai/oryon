@@ -2,24 +2,27 @@ import { v4 as uuidv4 } from "uuid";
 
  const DDinventory = [
   {
-    title: "Custom y00ts h00die",
+    title: "Custom DD h00die",
     price: 54.99,
     img: "logo-dd",
-    description: "A wonderful Custom y00ts h00die",
+    description: "A wonderful Custom DD hoodie",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
     id: uuidv4(),
   },
   {
-    title: "Custom y00ts T-shirt",
+    title: "Custom DD T-shirt",
     price: 22.99,
     img: "logo-dd",
-    description: "An insane Custom y00ts h00die",
+    description: "An insane Custom DD hoodie",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
     id: uuidv4(),
   },
   {
-    title: "Custom Product 1",
+    title: "Custom DD Product",
     price: 17,
     img: "logo-dd",
     description: "Our first custom product #1.",
+    stripeKey: "price_1MdbrtLrVEr2jlD6Qmd5VDl2",
     id: uuidv4(),
   },
 ];

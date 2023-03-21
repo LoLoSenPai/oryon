@@ -1,0 +1,143 @@
+
+.global-container-cart {
+  margin: 0 14rem;
+  padding-top: 15rem;
+}
+
+.heading-cart {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.cart-list li {
+  background: none;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.cart-list li img {
+  margin-top: 0;
+  width: 10rem;
+}
+.bloc-cart-infos {
+  padding: 1.5rem;
+  height: 100%;
+}
+.cart-list li h4 {
+  padding-top: 1rem;
+  font-size: 2.2rem;
+}
+.cart-list p {
+  font-size: 1.8rem;
+}
+.bloc-input {
+  margin-left: auto;
+}
+.bloc-input label {
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.cart-list input {
+  padding: 0.5rem;
+  width: 7.5rem;
+  font-size: 1.8rem;
+}
+.btn-cart {
+    display: block;
+    padding: 1rem 1.2rem;
+    font-size: 1.8rem;
+    margin: 2rem auto 0;
+    background: #5f4aff3b;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.2px);
+    -webkit-backdrop-filter: blur(14.2px);
+    font-weight: 600;
+}
+.bloc-cart-infos p {
+  margin-bottom: 0;
+}
+.total-price {
+  margin-top: 7rem;
+  font-size: 2rem;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 3px solid #5f4aff;
+  cursor: default;
+  font-weight: 600;
+}
+
+.remove-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  padding: 0.8rem;
+  margin-left: 2rem;
+  background: #5f4aff3b;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.2px);
+  -webkit-backdrop-filter: blur(14.2px);
+}
+
+
+.remove-btn:hover {
+  box-shadow: none;
+}
+
+.qty-label {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.bloc-input input[type="number"]::-webkit-inner-spin-button,
+.bloc-input input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* 
+.bloc-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloc-input input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}
+
+
+.bloc-input .qty-label {
+  margin-top: 5px;
+} */
+
+/* .bloc-input .increment-button,
+.bloc-input .decrement-button {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: #5f4aff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bloc-input .increment-button:hover,
+.bloc-input .decrement-button:hover {
+  background-color: #342ea7;
+} */

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./ProductShowcase.css";
 import inventory from "../../data/inventory";
+import Footer from "../../Components/Footer/Footer";
 
 export default function ProductShowcase() {
   const [nbMugs, setNbMugs] = useState(1);
@@ -54,33 +55,43 @@ export default function ProductShowcase() {
   }, [timerInfo])
 
   return (
-    <div className="showcase">
-      <div className="container-img-showcase">
-        <img
-          className="img-showcase"
-          src={
-            process.env.PUBLIC_URL +
-            `/images/${inventory[productClicked].img}.png`
-          }
-          alt=""
-        />
-      </div>
-      <div className="product-infos">
-        <h2>{inventory[productClicked].title}</h2>
-        <p>Prix: {inventory[productClicked].price}€</p>
-        <form onSubmit={addToCart}>
-          <label htmlFor="quantity">Quantité</label>
-          <input
-            type="number"
-            id="quanitity"
-            value={nbMugs}
-            onChange={updateMugs}
+    <div className="global-product-container">
+      <div className="showcase">
+        <div className="container-img-showcase">
+          <img
+            className="img-showcase"
+            src={
+              process.env.PUBLIC_URL +
+              `/images/${inventory[productClicked].img}.png`
+            }
+            alt=""
           />
-          <button>Ajouter au panier</button>
-          <span 
-          ref={addingInfo}
-          className="adding-info"></span>
-        </form>
+        </div>
+        <div className="product-infos">
+          <h2>{inventory[productClicked].title}</h2>
+          <p>Prix: {inventory[productClicked].price}$</p>
+          <form onSubmit={addToCart}>
+            <label htmlFor="quantity" className="qty-label">Quantity</label>
+            <input
+              type="number"
+              id="quantity"
+              value={nbMugs}
+              onChange={updateMugs}
+            />
+            <button className="add-to-cart-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Add to cart
+            </button>
+            <span 
+            ref={addingInfo}
+            className="adding-info"></span>
+          </form>
+        </div>
+      </div>
+      <div className="footer">
+        <Footer/>
       </div>
     </div>
   );
