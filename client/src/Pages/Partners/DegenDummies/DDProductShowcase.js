@@ -78,7 +78,7 @@ export default function DDProductShowcase() {
             className="img-showcase"
             src={
               process.env.PUBLIC_URL +
-              `/images/${DDinventory[productClicked].img}.png`
+              `/images/${DDinventory[productClicked].img}.webp`
             }
             alt=""
           />
@@ -103,6 +103,8 @@ export default function DDProductShowcase() {
             </button>
             <span ref={addingInfo} className="adding-info"></span>
           </form>
+          <h3>Description:</h3>
+          <p>{DDinventory[productClicked].description}</p>
         </div>
       </div>
       <Footer />

@@ -2,8 +2,11 @@ footer {
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4));
+  box-shadow: 32px 0 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* background-color: red; */
 }
 .footer-container {
   border-top: 1px solid #5f4aff;
@@ -101,6 +104,7 @@ footer {
   display: flex;
   margin: auto;
   padding: 1rem auto;
+  height: auto;
 }
 
 .col {
@@ -141,6 +145,7 @@ footer {
   }
   .footer-container {
     margin-top: 0;
+    height: auto;
   }
   .row {
     display: grid;
@@ -166,6 +171,7 @@ footer {
     grid-area: bottom;
     padding: 0;
     width: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -180,7 +186,8 @@ footer {
 @media screen and (max-width: 576px) {
   .footer-container {
     margin: 0;
-    padding: 2rem 0;
+    padding: 0;
+    height: 250px;
   }
   .footer-container p {
     font-size: 1.4rem;
@@ -189,7 +196,7 @@ footer {
   }
 
   .footer-container ul li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-size: 1.4rem;
   }
   .footer-container a:not(.social-icons a) {
@@ -198,11 +205,23 @@ footer {
   .logo-footer {
     width: 100px;
   }
+  .col-bottom h3 {
+    margin: 0;
+  }
+  .social-icons-mobile a {
+    width: 30px;
+    height: 30px;
+    font-size: 2.5rem;
+  }
+  .social-icons-mobile a::before {
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 450px) {
+
   .footer-container {
-    padding: auto 0;
+    height: auto;
   }
   .footer-container input[type="email"] {
     width: 250px;
@@ -210,7 +229,6 @@ footer {
   .row {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0 1rem;
     grid-template-areas: 
       "left"
       "right"

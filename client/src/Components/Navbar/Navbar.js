@@ -1,25 +1,62 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Navbar.css";
 import cartIcon from "../FloatingCart/shopping-cart.svg";
 import { Link } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import FloatingCart from "../FloatingCart/FloatingCart";
 import myNavLogo from "../../images/Logo-SVG-Black.svg";
 
 export default function Navbar() {
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
+  const navbarClasses = scrolled ? "navbar scrolled" : "navbar";
+
   const toggleBtnRef = useRef(null);
   const toggleBtnIconRef = useRef(null);
   const dropDownMenuRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggleBtnClick = () => {
-    dropDownMenuRef.current.classList.toggle("open");
+    setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  };  
 
-    const isOpen = dropDownMenuRef.current.classList.contains("open");
-    toggleBtnIconRef.current.classList = isOpen
-    ? "fa-solid fa-xmark"
-    : "fa-solid fa-bars";
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
+
+  const handleClickOutside = (event) => {
+    if (dropDownMenuRef.current && !dropDownMenuRef.current.contains(event.target)) {
+      if (!toggleBtnRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    }
+  };  
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const imgNavUrl = `${myNavLogo}?${new Date().getTime()}`;
 
@@ -27,43 +64,44 @@ export default function Navbar() {
   const shoppingCart = useSelector(state => state)
 
   let totalItems = 0;
-  for(const item of shoppingCart.cart){
+  for (const item of shoppingCart.cart) {
     totalItems += item.quantity;
   }
 
   return (
     <header>
-      <div className="navbar">
+      <div className={navbarClasses}>
         <div className="logo">
           <Link to="/" className="nav-link">
             <img className='logo-footer' src={imgNavUrl} alt="logo" />
           </Link>
         </div>
         <ul className="links">
-          <li><Link to="/" className="nav-link">Home</Link></li>
-          <li><Link to="/collections" className="nav-link">Collections</Link></li>
-          <li><Link to="/contact" className="nav-link">About Us</Link></li>
+          <li><Link to="/" className="nav-link" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/collections" className="nav-link" onClick={handleLinkClick}>Collections</Link></li>
+          <li><Link to="/contact" className="nav-link" onClick={handleLinkClick}>About Us</Link></li>
         </ul>
         <div className="floating-cart">
           <FloatingCart />
         </div>
-        {/* <a href="/login" className="action_btn">Connect Wallet</a> */}
         <div className="toggle_btn" ref={toggleBtnRef} onClick={handleToggleBtnClick}>
-          <i class="fa-solid fa-bars" ref={toggleBtnIconRef}></i>
+          <i className={menuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"} ref={toggleBtnIconRef}></i>
         </div>
       </div>
-      <div className="dropdown_menu" ref={dropDownMenuRef}>
-        <li><Link to="/" className="nav-link">Home</Link></li>
-        <li><Link to="/collections" className="nav-link">Collections</Link></li>
-        <li><Link to="/contact" className="nav-link">About Us</Link></li>
-        <li><Link to="/shoppingCart" className="nav-link nav-link-cart">
-              <div className="img-notif-container img-notif-container-navbar">
-                <img className="cart-icon cart-icon-navbar"  src={cartIcon} alt="icône cadi" />
+      <div className={`dropdown_menu ${menuOpen ? "open" : ""}`} ref={dropDownMenuRef}>
+        <ul>
+          <li><Link to="/" className="nav-link" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/collections" className="nav-link" onClick={handleLinkClick}>Collections</Link></li>
+          <li><Link to="/contact" className="nav-link" onClick={handleLinkClick}>About Us</Link></li>
+          <li><Link to="/shoppingCart" className="nav-link nav-link-cart" onClick={handleLinkClick}>
+                <div className="img-notif-container img-notif-container-navbar">
+                <img className="cart-icon cart-icon-navbar" src={cartIcon} alt="icône cadi" />
                 <span className="notif notif-navbar">{totalItems}</span>
               </div>
             </Link>
-        </li>
+          </li>
         {/* <li><a href="/login" className="action_btn">Connect Wallet</a></li> */}
+        </ul>
       </div>
     </header>
   );

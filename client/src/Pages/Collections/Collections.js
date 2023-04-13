@@ -14,13 +14,13 @@ export default function Collections() {
       <div className="collections-container">
         {collectionsData.map(collection => (
           <div key={collection.title} className={`collection-container collection-container-${collection.title.toLowerCase().replace(/\s/g, '_')}`}>
+            <div className={`card-content-container card-content-container-${collection.title.toLowerCase().replace(/\s/g, '_')}`}>
+              <img className='banner-profile' src={collection.bannerImgSrc} alt="" />
+              <img className='logo-profile' src={collection.logoImgSrc} alt="" />
+              <h3 className='title-profile'>{collection.title}</h3>
+              <div className={`overlay-card-content overlay-card-content-${collection.title.toLowerCase().replace(/\s/g, '_')}`}></div>
+            </div>
             <Link to={collection.link}> 
-              <div className={`card-content-container card-content-container-${collection.title.toLowerCase().replace(/\s/g, '_')}`}>
-                <img className='banner-profile' src={collection.bannerImgSrc} alt="" />
-                <img className='logo-profile' src={collection.logoImgSrc} alt="" />
-                <h3 className='title-profile'>{collection.title}</h3>
-                <div className={`overlay-card-content overlay-card-content-${collection.title.toLowerCase().replace(/\s/g, '_')}`}></div>
-              </div>
               <div className={`collection-card-content collection-card-content-${collection.title.toLowerCase().replace(/\s/g, '_')}`}>
                 <h3 className='title-profile title-profile-hover'>{collection.title}</h3>
                 <span className='collection-link'>See store</span>

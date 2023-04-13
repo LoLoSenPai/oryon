@@ -64,7 +64,7 @@ export default function Slider() {
                     key={obj.id}
                     className={slideAnim.index === index + 1 ? "slide active-anim" : "slide"}
                     >
-                        <img src={process.env.PUBLIC_URL + `/images/img${index + 1}.jpg`} alt="" />
+                        <img src={process.env.PUBLIC_URL + `/images/img${index + 1}.webp`} alt="" />
                     </div>
                 )
             })}

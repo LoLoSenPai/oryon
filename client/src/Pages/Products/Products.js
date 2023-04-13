@@ -20,12 +20,12 @@ export default function Products() {
                       <div className="visual-aspect">
                           <img 
                           className="img-product"
-                          src={process.env.PUBLIC_URL + `/images/${item.img}.png`} 
+                          src={process.env.PUBLIC_URL + `/images/${item.img}.webp`} 
                           alt="produit" />
                       </div>
                       <div className="info">
                           <p>{item.title}</p>
-                          <p>Prix : {item.price}€</p>
+                          <p>Price : {item.price} $</p>
                       </div>
                   </div>
                   <div className="back-card"></div>

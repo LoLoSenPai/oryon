@@ -1,30 +1,30 @@
 [
   {
     "title": "Degen Dummies",
-    "bannerImgSrc": "./images/img1.jpg",
-    "logoImgSrc": "./images/dd-logo.jpg",
+    "bannerImgSrc": "./images/img1.webp",
+    "logoImgSrc": "./images/dd-logo.webp",
     "link": "/collections/degen_dummies",
-    "previewImgSrc": "./images/18751.png"
+    "previewImgSrc": "./images/18751.webp"
   },
   {
     "title": "Famous Fox Federation",
-    "bannerImgSrc": "./images/img2.jpg",
-    "logoImgSrc": "./images/fff-logo.jpg",
+    "bannerImgSrc": "./images/img2.webp",
+    "logoImgSrc": "./images/fff-logo.webp",
     "link": "/collections/famous_fox_federation",
-    "previewImgSrc": "./images/27131.png"
+    "previewImgSrc": "./images/27131.webp"
   },
   {
-    "title": "Neo Labs",
-    "bannerImgSrc": "./images/img3.jpg",
-    "logoImgSrc": "./images/nh-logo.png",
-    "link": "/collections/neo_hunters",
-    "previewImgSrc": "./images/nft-nh.png"
+    "title": "Stoned Ape Crew",
+    "bannerImgSrc": "./images/img8.webp",
+    "logoImgSrc": "./images/logo-sac.webp",
+    "link": "/collections/stoned_ape_crew",
+    "previewImgSrc": "./images/nft-sac.webp"
   },
   {
-    "title": "RetroGoons",
-    "bannerImgSrc": "./images/img4.jpg",
-    "logoImgSrc": "./images/rg-logo.jpg",
-    "link": "/collections/retro_goons",
-    "previewImgSrc": "./images/retrogoon1.png"
+    "title": "Visages Club",
+    "bannerImgSrc": "./images/img7.webp",
+    "logoImgSrc": "./images/logo-vc.webp",
+    "link": "/collections/visages_club",
+    "previewImgSrc": "./images/nft-visages.webp"
   }
 ]

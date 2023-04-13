@@ -1,13 +1,3 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-}
-
 .btn-blur-effect {
     position: relative;
     padding: 1em 1.8em;
@@ -106,21 +96,19 @@ html {
 }
 
 .back-btn {
-    top: 8rem;
+    top: 0rem;
     left: 8rem;
     display: inline;
 }
 
 @media screen and (max-width: 980px) {
     .back-btn {
-        top: 3rem;
         left: 3rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .back-btn {
-        top: 1rem;
-        left: 2rem;
+        top: -1rem;
     }
 }

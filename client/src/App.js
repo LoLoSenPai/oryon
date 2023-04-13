@@ -6,15 +6,19 @@ import Home from "./Pages/Home/Home";
 import Collections from "./Pages/Collections/Collections";
 import Contact from "./Pages/Contact/Contact";
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
-import NHProductShowcase from "./Pages/Partners/NeoHunters/NHProductShowcase";
-import NHProducts from "./Pages/Partners/NeoHunters/NHProducts";
+import SACProductShowcase from "./Pages/Partners/StonedApeCrew/SACProductShowcase";
+import SACProducts from "./Pages/Partners/StonedApeCrew/SACProducts";
 import DDProductShowcase from "./Pages/Partners/DegenDummies/DDProductShowcase";
 import DDProducts from "./Pages/Partners/DegenDummies/DDProducts";
 import FFFProductShowcase from "./Pages/Partners/FamousFoxFederation/FFFProductShowcase";
 import FFFProducts from "./Pages/Partners/FamousFoxFederation/FFFProducts";
-import RGProductShowcase from "./Pages/Partners/RetroGoons/RGProductShowcase";
-import RGProducts from "./Pages/Partners/RetroGoons/RGProducts";
+import VCProductShowcase from "./Pages/Partners/VisagesClub/VCProductShowcase";
+import VCProducts from "./Pages/Partners/VisagesClub/VCProducts";
+import PrivacyPolicy from "./Pages/Legal/PrivacyPolicy/PrivacyPolicy";
+import ShippingPolicy from "./Pages/Legal/ShippingPolicy/ShippingPolicy";
+import TermsAndConditions from "./Pages/Legal/TermsAndConditions/TermsAndConditions";
 import ScrollToTop from "./Utils/ScrollToTop";
+import page404 from "./Utils/page404/page404";
 
 function App() {
 
@@ -29,13 +33,13 @@ function App() {
             <Route exact path="/collections" component={Collections} />
             <Route
               exact
-              path="/collections/neo_hunters"
-              component={NHProducts}
+              path="/collections/stoned_ape_crew"
+              component={SACProducts}
             />
             <Route
               exact
-              path="/collections/neo_hunters/:id"
-              component={NHProductShowcase}
+              path="/collections/stoned_ape_crew/:id"
+              component={SACProductShowcase}
             />
             <Route
               exact
@@ -59,16 +63,20 @@ function App() {
             />
             <Route
               exact
-              path="/collections/retro_goons"
-              component={RGProducts}
+              path="/collections/visages_club"
+              component={VCProducts}
             />
             <Route
               exact
-              path="/collections/retro_goons/:id"
-              component={RGProductShowcase}
+              path="/collections/visages_club/:id"
+              component={VCProductShowcase}
             />
+            <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+            <Route exact path="/shipping-policy" component={ShippingPolicy} />
+            <Route exact path="/terms-and-conditions" component={TermsAndConditions} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/shoppingCart" component={ShoppingCart} />
+            <Route exact path="*" component={page404} />
           </Switch>
         </div>
       </Router>

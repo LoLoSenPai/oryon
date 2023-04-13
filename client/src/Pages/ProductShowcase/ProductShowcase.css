@@ -41,7 +41,6 @@ html {
 
 .showcase {
     width: 100%;
-    width: 70rem;
     margin: 0 auto;
     padding: 3rem 0;
     display: flex; 
@@ -77,14 +76,18 @@ html {
     margin-bottom: 0.5rem;
     font-size: 3.5rem;
 }
-.product-infos p {
+.product-infos h3 {
+    margin-bottom: 0.5rem;
     font-size: 2.5rem;
+}
+.product-infos p {
+    font-size: 2.4rem;
     margin-bottom: 2rem;
 }
 .product-infos label {
     display: block;
-    margin-bottom: 0.5rem;
     font-size: 2rem;
+    margin: 0 0 0.5rem;
 }
 .product-infos input {
     display: block;
@@ -105,15 +108,47 @@ form button {
 .add-to-cart-btn {
     background: #5f4aff3b;
     border-radius: 16px;
+    font-weight: 600;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(14.2px);
     -webkit-backdrop-filter: blur(14.2px);
 }
 
-@media (max-width: 426px) {
+@media screen and (max-width: 768px) {
     .showcase {
         flex-direction: column;
+        width: 80%;
+        padding: 0;
+    }
+    .container-img-showcase {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+    }
+    .product-infos {
         width: 100%;
         padding: 0;
+        margin-top: 2rem;
+    }
+    .product-infos h2 {
+        font-size: 2.5rem;
+    }
+    .product-infos p {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .product-infos label {
+        font-size: 1.8rem;
+    }
+    .product-infos input {
+        font-size: 1.8rem;
+    }
+    .product-infos form button {
+        font-size: 1.8rem;
+        display: inline;
+    }
+    .product-infos form {
+        display: grid;
     }
 }

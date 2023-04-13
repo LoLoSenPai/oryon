@@ -1,8 +1,8 @@
 import React from 'react'
 import './Home.css'
-import imgHomeShop from '../../images/3D-Logo.png'
-import bannerAd from './Soon-image.png'
-import bannerAdMobile from './Soon-image-mobile.png'
+import imgHomeShop from '../../images/3D-Logo.webp'
+import bannerAd from './Soon-image.webp'
+import bannerAdMobile from './Soon-image-mobile.webp'
 import Footer from '../../Components/Footer/Footer';
 
 
@@ -27,7 +27,7 @@ function Home() {
             <li><i class="fa-solid fa-chevron-right"></i>Best Quality</li>
           </ul>
           <div class="button-l">
-            <a href='../Collections'>
+            <a href='/Collections'>
               <button class="btn-hero-banner">Start Now</button>
             </a>
           </div>
@@ -42,24 +42,24 @@ function Home() {
         </div>
         <div className="partner-container">
           <div className="large-project partner-icon">
-            <img src="./images/logo-dd.png" alt="" />
+            <img src="./images/logo-dd.webp" alt="" />
             <h3>Degen Dummies</h3>
+            <a href="https://twitter.com/degendummies" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+          <div className="large-project partner-icon">
+            <img src="./images/logo-sac.webp" alt="" />
+            <h3>Stoned Ape Crew</h3>
+            <a href="https://twitter.com/StonedApeCrew" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+          </div>
+          <div className="large-project partner-icon">
+            <img className='gray-icon' src="./images/fff-logo1.webp" alt="" />
+            <h3>Famous Fox Federation</h3>
             <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
           <div className="large-project partner-icon">
-            <img src="./images/logo-gkd.png" alt="" />
-            <h3>Ghost Kid DAO</h3>
-            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
-          </div>
-          <div className="large-project partner-icon">
-            <img src="./images/logo-nh.png" alt="" />
-            <h3>Neo Labs</h3>
-            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
-          </div>
-          <div className="large-project partner-icon">
-            <img src="./images/logo-yt.png" alt="" />
-            <h3>Yeah Tigers</h3>
-            <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
+            <img className='gray-icon' src="./images/logo-vc.webp" alt="" />
+            <h3>Visages Club</h3>
+            <a href="https://twitter.com/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
         </div>
         <div className="banner-title banner-title-bottom">
@@ -76,15 +76,15 @@ function Home() {
         </div>
         <div className="custom-products-container">
           <div className="custom-product">
-            <img src="./images/section-clothes.png" alt="" />
+            <img src="./images/section-clothes.webp" alt="" />
             <h3>Clothes</h3>
           </div>
           <div className="custom-product">
-            <img src="./images/section-access.jpg" alt="" />
+            <img src="./images/section-access.webp" alt="" />
             <h3>Accessories</h3>
           </div>
           <div className="custom-product">
-            <img src="./images/section-home.jpg" alt="" />
+            <img src="./images/section-home.webp" alt="" />
             <h3>Home style</h3>
           </div>
         </div>
@@ -95,28 +95,28 @@ function Home() {
         </div>
         <div className="featured-products-container">
           <div className="featured-product">
-            <img src="./images/NH1-1.png" alt="" />
+            <img src="./images/NH1-1.webp" alt="" />
             <h4>Hoodie Neo Hunter</h4>
             <p>
               From USD 19.95 $
             </p>
           </div>
           <div className="featured-product">
-            <img src="./images/hoodie-photo.png" alt="" />
+            <img src="./images/hoodie-photo.webp" alt="" />
             <h4>T-shirt Claynosaure</h4>
             <p>
               From USD 19.95 $
             </p>
           </div>
           <div className="featured-product">
-            <img src="./images/shirt-photo.png" alt="" />
+            <img src="./images/shirt-photo.webp" alt="" />
             <h4>Hat Moon Bird</h4>
             <p>
               From USD 19.95 $
             </p>
           </div>
           <div className="featured-product">
-            <img src="./images/hoodie-photo.png" alt="" />
+            <img src="./images/hoodie-photo.webp" alt="" />
             <h4>Mug Doge</h4>
             <p>
               From USD 19.95 $

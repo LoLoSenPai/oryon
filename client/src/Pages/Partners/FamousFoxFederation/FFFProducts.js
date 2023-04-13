@@ -25,11 +25,11 @@ export default function FFFProducts() {
 return (
   <div className="global-products-container">
     <div className="collection-banner">
-      <img src="../../../images/img2.jpg" alt="" />
+      <img src="../../../images/img2.webp" alt="" />
     </div>
     <div className="introduction">
       <div className="collection-logo">
-        <img src="../../../images/fff-logo.jpg" alt="" />
+        <img src="../../../images/fff-logo.webp" alt="" />
       </div>
       <div className="seconde-column-introduction">
         <div className="collection-description-header">
@@ -65,7 +65,7 @@ return (
                 <div className="visual-aspect">
                   <img
                     className="img-product"
-                    src={process.env.PUBLIC_URL + `/images/${item.img}.png`}
+                    src={process.env.PUBLIC_URL + `/images/${item.img}.webp`}
                     alt="produit"
                   />
                 </div>

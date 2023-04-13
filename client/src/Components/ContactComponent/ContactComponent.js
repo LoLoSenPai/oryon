@@ -40,6 +40,7 @@ function ContactComponent() {
 
     return (
         <form id="contact-form">
+            <h2 className="form-title">Contact Us</h2>
             <div className="form-group">
                 <label htmlFor="full-name">Full Name:</label>
                 <input type="text" className="form-control" id="full-name" name="full-name" required />
@@ -52,7 +53,7 @@ function ContactComponent() {
                 <label htmlFor="message">Message:</label>
                 <textarea className="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit" className="btn btn-primary">Send</button>
+            <button type="submit" className="btn-form-submit">Send</button>
         </form>
     );
 }

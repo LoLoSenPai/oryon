@@ -62,7 +62,7 @@ export default function ProductShowcase() {
             className="img-showcase"
             src={
               process.env.PUBLIC_URL +
-              `/images/${inventory[productClicked].img}.png`
+              `/images/${inventory[productClicked].img}.webp`
             }
             alt=""
           />

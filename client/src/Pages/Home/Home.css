@@ -18,6 +18,9 @@
 html {
   font-size: 62.5%;
 }
+*:not(i, a) {
+	color: #151b22;
+}
 
 
 /* HERO BANNER */
@@ -26,6 +29,9 @@ html {
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
 }
 
 .banner-l {
@@ -43,9 +49,9 @@ html {
 	font-size: 7.7rem;
 	font-style: bold;
 	text-align: center;
-	width: 70%;
 	margin: 3rem auto;
 	padding: 0 2rem;
+	width: 10ch;
 }
 
 .banner-l p {
@@ -54,9 +60,10 @@ html {
 	font-size: 2.8rem;
 	line-height: 4rem;
 	width: 80%;
-	max-width: 600px;
+	max-width: 34ch;
 	margin: 0 auto;
 	padding: 2rem 0;
+	font-weight: 500;
 }
 
 .banner-l li {
@@ -64,6 +71,7 @@ html {
 	list-style-type: none;
 	line-height: 3rem;
 	margin-left: 15rem;
+	font-weight: 500;
 } 
 .banner-l li:last-child {
 	margin-bottom: 2rem;
@@ -84,7 +92,7 @@ html {
 	/* background: #efefef; */
 	background-color: #5f4aff;
 	border: none;
-	border-radius: 15px;
+	border-radius: 25px;
 	/* color: #444; */
 	color: #fff;
 	font-size: 1.8rem;
@@ -93,25 +101,27 @@ html {
 	text-align: center;
 	outline: none;
 	cursor: pointer;
-	transition: .2s ease-in-out;
+	/* transition: .2s ease-in-out;
 	box-shadow: -3px -3px 14px rgba(255, 255, 255, .7),
 				-3px -3px 14px rgba(255, 255, 255, .5),
 				-4px -4px 14px rgba(255, 255, 255, .075),
-				-4px -4px 14px rgba(0, 0, 0, .15);
-	}
+				-4px -4px 14px rgba(0, 0, 0, .15); */
+	transition: 0.3s ease;
+	box-shadow: inset 0.2rem 0.2rem 1rem #8abdff, inset -0.2rem -0.2rem 1rem #5b0eeb;
+}
+
 .btn-hero-banner:hover {
-	box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-				-2px -2px 4px rgba(255, 255, 255, .4),
+	box-shadow: -2px -2px 6px rgba(255, 255, 255, .4),
+				-2px -2px 4px rgba(255, 255, 255, .2),
 				2px 2px 2px rgba(255, 255, 255, .05),
 				2px 2px 4px rgba(0, 0, 0, .1);
-	color: #5f4aff;
-	background-color: #fff;
 	}
 .btn-hero-banner:active {
-	box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+	/* box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
 				inset -2px -2px 4px rgba(255, 255, 255, .5),
 				inset 2px 2px 2px rgba(255, 255, 255, .075),
-				inset 2px 2px 4px rgba(0, 0, 0, .15);
+				inset 2px 2px 4px rgba(0, 0, 0, .15); */
+	box-shadow: inset 0.2rem 0.2rem 1rem #5b0eeb, inset -0.2rem -0.2rem 1rem #8abdff;
 }
 
 .fa-chevron-right{
@@ -210,6 +220,11 @@ html {
 .large-project h3:hover {
 	color: #5f4aff;
 	cursor: default;
+}
+
+.gray-icon {
+	filter: grayscale(100%);
+	border-radius: 50%;
 }
 .partner-icon a {
     position: relative;
@@ -415,7 +430,6 @@ html {
 	}
 	.banner-l h1 {
 		font-size: 5.8rem;
-		width: 100%;
 		margin: 2rem 0;
 		padding: 1rem 0;
 	}
@@ -507,6 +521,7 @@ html {
 	.btn-hero-banner {
 		font-size: 1.6rem;
 		padding: 0.8rem 2rem;
+		margin-left: 25%;
 	}
 	.banner-r{
 		width: 100%;
@@ -517,17 +532,17 @@ html {
 	
 	.banner-l h1 {
 		font-size: 5.2rem;
-		width: 60%;
-		margin: auto;
+		margin: 2rem auto;
 	}
 	
 	.banner-l p {
 		font-size: 1.6rem;
-		text-align: justify;
 		padding: 0 auto;
+		margin: 0 auto;
 	}
 	.banner-l li {
 		font-size: 1.4rem;
+		margin-left: 30%;
 	}
 
 	.custom-products-container {
@@ -555,29 +570,29 @@ html {
 }
 
 /*Mobile view */
-@media (max-width: 610px) {
+@media (max-width: 614px) {
 
 	.global-home-container {
-		padding-top: 9rem;
+		padding-top: 6.5rem;
 	}
 
 	.hero-banner {
-		margin: 2rem auto 16rem;
+		margin: 0;
 		display: block;
-		height: 45vh;
+		height: 60vh;
 	}
 	
 	.banner-l {
 		display: flex;
+		width: 100%;
 		flex-direction: column;
 		margin: 0;
 		padding: 0;
 	}
 	
 	.banner-l h1 {
-		font-size: 4.5rem;
-		margin: 3rem auto;
-		padding: 0 3rem;
+		font-size: 4rem;
+		padding: 2rem auto;
 	}
 	
 	.banner-l p {
@@ -599,6 +614,7 @@ html {
 		width: auto;
 		height: auto;
 		padding: 0.6rem 1rem;
+		margin-left: 20%;
 	}
 	/* .btn-hero-banner {
 		background-color: #5f4aff;
@@ -693,31 +709,52 @@ html {
 	}
 }
 
-@media screen and (max-width: 425px) {
-	.btn-hero-banner {
-		font-size: 1.3rem;
-		margin-top: 1rem;
-		margin-left: 3rem;
-		width: auto;
-		height: auto;
-		padding: 0.6rem 1rem;
-	}
-	
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 461px) {
 	.banner-l h1 {
-		padding: 0 1rem;
+		font-size: 4rem;
 	}
 	
 	.banner-l p {
-		text-align: center;
-		margin: 0 auto;
-		padding: 1rem;
+		font-size: 1.4rem;
+		padding: 1.5rem 2.4rem;
+		line-height: 1.8rem;
+		text-align: justify;
+	}
+	.banner-l li {
+		margin-left: 15%;
+		font-size: 1.2rem;
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 425px) {
+.btn-hero-banner {
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	margin-left: 3rem;
+	width: auto;
+	height: auto;
+}
+	
+}
+@media screen and (max-width: 392px) {
+	.hero-banner {
+		height: 50vh;
+	}
+	.banner-l h1 {
+		font-size: 3.5rem;
 	}
 	
+	.banner-l p {
+		font-size: 1.2rem;
+		padding: 1.5rem 1.4rem;
+		line-height: 1.6rem;
+		text-align: justify;
+	}
 	.banner-l li {
-		margin: 0;
+		margin-left: 10%;
+		font-size: 1rem;
+		margin-top: 0;
 	}
 	.custom-product img {
 		width: 300px;

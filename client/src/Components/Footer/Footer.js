@@ -25,16 +25,16 @@ const Footer = () => {
             <img className='logo-footer' src={imgUrl} alt="logo" />
             <p>&copy; Oryon co.</p>
             <p>All rights reserved</p>
-            <div className="social-icons partner-icon">
+            <div className="social-icons partner-icon social-icons-mobile">
               <a href="https://discord.gg/fRgWtfj2wd" target="_blank" rel="noreferrer"><i className="fab fa-discord discord"></i></a>
               <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
             </div>
           </div>
           <div className="col col-right">
             <ul>
-              <li><a href="https://twitter.com/OryonMerch">Privacy policy</a></li>
-              <li><a href="https://twitter.com/OryonMerch">Shipping policy</a></li>
-              <li><a href="https://twitter.com/OryonMerch">Terms and conditions</a></li>
+              <li><a href="/privacy-policy">Privacy policy</a></li>
+              <li><a href="/shipping-policy">Shipping policy</a></li>
+              <li><a href="/terms-and-conditions">Terms and conditions</a></li>
             </ul>
           </div>
           <div className="col col-bottom">

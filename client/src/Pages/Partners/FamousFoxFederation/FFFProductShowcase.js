@@ -78,7 +78,7 @@ export default function FFFProductShowcase() {
             className="img-showcase"
             src={
               process.env.PUBLIC_URL +
-              `/images/${FFFinventory[productClicked].img}.png`
+              `/images/${FFFinventory[productClicked].img}.webp`
             }
             alt=""
           />
@@ -103,6 +103,8 @@ export default function FFFProductShowcase() {
             </button>
             <span ref={addingInfo} className="adding-info"></span>
           </form>
+          <h3>Description:</h3>
+          <p>{FFFinventory[productClicked].description}</p>
         </div>
       </div>
       <Footer />

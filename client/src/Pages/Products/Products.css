@@ -180,7 +180,6 @@
     font-size: 4rem;
     border-radius: 10px;
     text-decoration: none;
-    color: var(--main-purple);
     margin: 2rem 1rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -189,6 +188,7 @@
     backdrop-filter: blur(2px);
     transition: 0.5s;
     overflow: hidden;
+    color: #5f4aff;
 }
 .container-icones a:hover {
     transform: translateY(-10px);
@@ -273,8 +273,9 @@
     .container-products .info {
         height: 15%;
         background: #fff;
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
         border-top: 1px solid rgb(77, 77, 77);
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;

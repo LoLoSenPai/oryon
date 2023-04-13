@@ -19,15 +19,8 @@ html {
   font-size: 62.5%;
 }
 
-.App {
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-}
-.app-container {
-  background: url('./images/Purple-Intense.png');
+.page-container {
+  background: url('./images/Purple-Intense.webp');
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

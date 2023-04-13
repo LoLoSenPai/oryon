@@ -67,33 +67,35 @@ export default function ShoppingCart() {
   return (
     <div className="global-container-cart">
       <p className="heading-cart">Your cart :</p>
-      <ul className="cart-list">
-        {storeState.cart.map((item) => (
-          <li key={item.id}>
-            <img
-              src={process.env.PUBLIC_URL + `/images/${item.img}.png`}
-              alt=""
-            />
-            <div className="bloc-cart-infos">
-              <h4>{item.title}</h4>
-              <p>Price: {item.price} $</p>
-            </div>
-            <div className="bloc-input">
-              <label htmlFor={`quantityInput-${item.id}`}>Quantity</label>
-              <div className="input-container">
-                <input
-                  onChange={(e) => handleQuantityChange(e, item.id)}
-                  id={`quantityInput-${item.id}`}
-                  type="number"
-                  className="qty-label"
-                  value={item.quantity}
-                />
-                <button className="remove-btn" onClick={() => handleRemoveItemClick(item.id)}>Remove</button>
+        <div className={`cart ${storeState.cart.length === 0 ? "cart-empty" : ""}`}>
+        <ul className="cart-list">
+          {storeState.cart.map((item) => (
+            <li key={item.id}>
+              <img
+                src={process.env.PUBLIC_URL + `/images/${item.img}.webp`}
+                alt=""
+              />
+              <div className="bloc-cart-infos">
+                <h4>{item.title}</h4>
+                <p>Price: {item.price} $</p>
               </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+              <div className="bloc-input">
+                <label htmlFor={`quantityInput-${item.id}`}>Quantity</label>
+                <div className="input-container">
+                  <input
+                    onChange={(e) => handleQuantityChange(e, item.id)}
+                    id={`quantityInput-${item.id}`}
+                    type="number"
+                    className="qty-label"
+                    value={item.quantity}
+                  />
+                  <button className="remove-btn" onClick={() => handleRemoveItemClick(item.id)}>Remove</button>
+                  <button className="remove-btn remove-btn-mobile" onClick={() => handleRemoveItemClick(item.id)}>❌</button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       <p className="total-price">Total : {`${totalPrice.toFixed(2)} $`}</p>
       <button className="btn-cart" onClick={checkout}>
         <span></span>
@@ -102,5 +104,6 @@ export default function ShoppingCart() {
         <span></span> Process payment
       </button>
     </div>
+  </div>
   );
 }

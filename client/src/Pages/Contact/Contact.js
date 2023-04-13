@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import './Contact.css';
+import ContactComponent from '../../Components/ContactComponent/ContactComponent';
 
 const Contact = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -11,8 +12,9 @@ const Contact = () => {
 
   return (
     <section className="global-accordion-container">
-      <div class="accordion container">
-        <div class="accordion__container">
+      <div className="accordion-box accordion-container">
+        <h2 className="accordion-box-title">Frequently Asked Questions</h2>
+        <div className="accordion__container">
           {[
             {
               title: "Who is Oryon Merch?",
@@ -35,20 +37,21 @@ const Contact = () => {
                 "Oryon Merch offers high-quality products at affordable prices. Our products are made with care and attention to detail, and we have a friendly and helpful customer service team."
             }
           ].map((item, index) => (
-            <div class="accordion__item" key={index}>
-              <header class="accordion__header" onClick={() => handleAccordionClick(index)}>
-                <h3 class="accordion__title">{item.title}</h3>
+            <div className="accordion__item" key={index}>
+              <header className="accordion__header" onClick={() => handleAccordionClick(index)}>
+                <h3 className="accordion__title">{item.title}</h3>
               </header>
               <div
-                class="accordion__content"
+                className="accordion__content"
                 style={{ height: index === openIndex ? 'auto' : 0 }}
               >
-                <p class="accordion__description">{item.description}</p>
+                <p className="accordion__description">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <ContactComponent />
       <Footer />
     </section>
   );

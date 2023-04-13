@@ -8,7 +8,7 @@
     width: 80%;
     max-width: 1300px;
     min-height: 34.5vh;
-    margin: 0 auto 2rem;
+    margin: 10rem auto;
 }
 
 .intro-collections {
@@ -28,14 +28,14 @@
     width: 45%;
     margin: 1rem auto 0;
     padding: 1rem 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     text-align: center;
     border-radius: 20px;
-      animation: animate-float-thin 5s ease-in-out infinite;
+    animation: animate-float-thin 5s ease-in-out infinite;
 }
 .text-info-collections {
     font-size: 2.8rem;
@@ -43,7 +43,7 @@
     width: 35%;
     margin: 1rem auto 0;
     padding: 1rem 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4));
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       border: 1px solid rgba(255, 255, 255, 0.18);
       backdrop-filter: blur(20px);
@@ -68,9 +68,13 @@
     margin: 20px;
     overflow: hidden;
     flex-shrink: 0;
-    background-color: #5f4aff1f;
     border-radius: 20px;
     position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 3;
 }
 .collection-container:hover {
@@ -107,16 +111,26 @@
 
 .title-profile {
     text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    text-decoration: none;
+    color: #151b22;
+}
+
+.title-profile-hover {
+    margin-left: 5rem;
+    text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 5rem;
-}
-
-.title-profile-hover {
-    margin-left: 5rem;
+    color: #fff;
 }
 
 .collection-container .preview-nft-content {
@@ -207,3 +221,22 @@
     transition-delay: 0.35s;
 }
 
+@media screen and (max-width: 575px) {
+    .intro-collections {
+        margin: 2rem auto 6rem;
+        font-size: 2rem;
+    }
+    
+    .title-collections {
+        font-size: 3rem;
+        width: 55%;
+        margin: 1rem auto 0;
+        padding: 1rem 0;
+    }
+    .text-info-collections {
+        font-size: 2rem;
+        width: 90%;
+        margin: 1rem auto 0;
+        padding: 1rem 0;
+    }
+}
