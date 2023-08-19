@@ -7,12 +7,12 @@
     grid-template-columns: 1fr 3fr 2fr;
     align-items: center;
     justify-content: center;
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 	/* background: rgba(255, 255, 255, 0.5); */
 	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	backdrop-filter: blur(50px);
-	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
     width: auto;
     min-height: 25rem;
     margin: 0 3rem;
@@ -188,7 +188,7 @@
     backdrop-filter: blur(2px);
     transition: 0.5s;
     overflow: hidden;
-    color: #5f4aff;
+    color: #02ffa7;
 }
 .container-icones a:hover {
     transform: translateY(-10px);

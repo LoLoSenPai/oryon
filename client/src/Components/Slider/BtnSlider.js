@@ -6,7 +6,7 @@ export default function BtnSlider({direction, moveSlide}) {
 
     const buttonStyle = {
         backgroundColor: "transparent",
-        borderColor: "#5f4aff",
+        borderColor: "#02ffa7",
     };
     const arrowStyle = {
         // strokeWidth: "2px",

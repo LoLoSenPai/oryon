@@ -55,12 +55,12 @@
   .form-control:focus {
     border-color: #80bdff;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem #5f4aff5e;
+    box-shadow: 0 0 0 0.2rem #02ffa75e;
   }
   
   .btn-form-submit {
     color: #fff;
-    background-color: #5f4aff;
+    background-color: #02ffa7;
     border-color: #513fda;
     padding: 0.5rem 1rem;
     border-radius: 15px;
@@ -75,7 +75,7 @@
   .btn-form-submit:hover {
     color: #fff;
     background-color: #513fda;
-    border-color: #5f4aff;
+    border-color: #02ffa7;
   }
   
   textarea.form-control {

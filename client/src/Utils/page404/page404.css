@@ -117,54 +117,6 @@
   overflow: hidden;
 }
 
-/* .custom-navbar {
-  padding-top: 15px;
-}
-
-.brand-logo {
-  margin-left: 25px;
-  margin-top: 5px;
-  display: inline-block;
-}
-
-.navbar-links {
-  float: right;
-  margin-right: 15px;
-  text-transform: uppercase;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-li {
-  float: left;
-  padding: 0px 15px;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 12px;
-
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-li a:hover {
-  color: #ffcb39;
-} */
-
 .btn-request {
   padding: 10px 25px;
   border: 1px solid #ffcb39;
@@ -234,17 +186,12 @@ li a:hover {
   top: 20%;
   left: 15%;
   z-index: 90;
-  /*    animation: spin-earth 100s infinite linear both;*/
 }
 
 .object_moon {
   position: absolute;
   top: 12%;
   left: 25%;
-  /*
-    transform: rotate(0deg);
-    transition: transform ease-in 99999999999s;
-*/
 }
 
 
@@ -311,18 +258,6 @@ li a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  /* .navbar-links {
-    display: none;
-  }
-
-  .custom-navbar {
-    text-align: center;
-  }
-
-  .brand-logo img {
-    width: 120px;
-  } */
-
   .box_astronaut {
     top: 70%;
   }

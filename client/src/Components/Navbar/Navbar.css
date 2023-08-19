@@ -22,7 +22,7 @@ header {
 }
 
 .scrolled {
-  border-bottom: 1px solid #5f4aff;
+  border-bottom: 1px solid #02ffa7;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(7px);
 }
@@ -46,22 +46,22 @@ header {
 .navbar a, .dropdown_menu a {
   text-decoration: none;
   font-size: 2rem;
-  color: #000;
+  color: #fff;
 }
 
 .navbar a:hover, .dropdown_menu a:hover {
-  color: #5f4aff;
+  color: #02ffa7;
 }
 
 .navbar .toggle_btn {
-  color: #5f4aff;
+  color: #02ffa7;
   font-size: 2.5rem;
   cursor: pointer;
   display: none;
 }
 
 .action_btn {
-  background-color: #5f4aff;
+  background-color: #02ffa7;
   color: #fff;
   padding: 0.8rem 1.3rem;
   border: none;

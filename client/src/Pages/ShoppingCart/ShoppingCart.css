@@ -56,7 +56,7 @@
     padding: 1rem 1.2rem;
     font-size: 1.8rem;
     margin: 2rem auto 0;
-    background: #5f4aff3b;
+    background: #02ffa73b;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(14.2px);
@@ -72,7 +72,7 @@
   display: inline-block;
   border-radius: 20px;
   padding: 1.5rem;
-  border: 3px solid #5f4aff;
+  border: 3px solid #02ffa7;
   cursor: default;
   font-weight: 600;
 }
@@ -84,7 +84,7 @@
   cursor: pointer;
   padding: 0.8rem;
   margin-left: 2rem;
-  background: #5f4aff3b;
+  background: #02ffa73b;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.2px);
@@ -137,7 +137,7 @@
   width: 20px;
   height: 20px;
   margin: 5px;
-  background-color: #5f4aff;
+  background-color: #02ffa7;
   color: white;
   border: none;
   border-radius: 50%;

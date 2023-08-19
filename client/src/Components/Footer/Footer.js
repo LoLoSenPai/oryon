@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="col col-bottom">
             <h3>Get our latest updates!</h3>
             <form onSubmit={handleSubmit}>
-              <input type="email" placeholder="your@email.com" value={email} onChange={handleEmailChange} />
+              <input type="email" placeholder="your@email.com" value={email} onChange={handleEmailChange} className='email-input' />
               <button className='register-btn' type="submit">Join</button>
             </form>
           </div>
