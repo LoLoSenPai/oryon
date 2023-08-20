@@ -4,58 +4,64 @@ import "../../Products/Products.css";
 import inventory from "../../../data/vc-inventory.js";
 import FloorPrice from "../../../API/FloorPrice/FloorPrice";
 import Footer from '../../../Components/Footer/Footer';
+import { collectionToContractAddress } from '../../../API/FloorPrice/CollectionsInfo';
+import axios from 'axios';
 // import BackButton from '../../../Components/BackButton/BackButton';
 
 export default function VCProducts() {
   const [floorPrice, setFloorPrice] = useState(null);
+  const collectionName = "the_herd";
+  const contractAddress = collectionToContractAddress[collectionName];
 
   useEffect(() => {
     async function fetchFloorPrice() {
       try {
-        const response = await fetch("/api/floorPrices/goonie"); // A MODIFIER POUR VISAGES CLUB
-        const data = await response.json();
+        console.log(`Fetching floor price for contract address: ${contractAddress}`);
+        const response = await axios.get(`/api/floorPrices/${contractAddress}`);
+        const data = response.data;
+        console.log("API Response:", data);
         setFloorPrice(data.floorPrice);
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     }
     fetchFloorPrice();
-  }, []);
+  }, [contractAddress]);
 
-return (
-  <div className="global-products-container">
-    <div className="collection-banner">
-      <img src="../../../images/img7.webp" alt="" />
-    </div>
-    <div className="introduction">
-      <div className="collection-logo">
-        <img src="../../../images/logo-vc.webp" alt="" />
+  return (
+    <div className="global-products-container">
+      <div className="collection-banner">
+        <img src="../../../images/banner-theherd.webp" alt="" />
       </div>
-      <div className="seconde-column-introduction">
-        <div className="collection-description-header">
-          <h2>Visages Club</h2>
-          <div class="container-icones">
-            <a href="https://discord.gg/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-discord"></i></a>
-            <a href="https://twitter.com/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
-            <a href="https://exchange.art/0xddddd/nfts" target="_blank" rel="noreferrer"><i className="fas fa-globe"></i></a>
+      <div className="introduction">
+        <div className="collection-logo">
+          <img src="../../../images/logo-theherd.webp" alt="" />
+        </div>
+        <div className="seconde-column-introduction">
+          <div className="collection-description-header">
+            <h2>The Herd</h2>
+            <div className="container-icones">
+              <a href="https://discord.gg/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-discord"></i></a>
+              <a href="https://twitter.com/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+              <a href="https://exchange.art/0xddddd/nfts" target="_blank" rel="noreferrer"><i className="fas fa-globe"></i></a>
+            </div>
+          </div>
+          <p className="introduction-description">Pioneers of Iced Out Coin Flip. Building THE HERD.</p>
+        </div>
+        <div className="collection-stats-container">
+          <div className="collection-floor-price">
+            {floorPrice !== null ? <FloorPrice floorPrice={floorPrice} /> : <p>Loading floor price...</p>}
+          </div>
+          <div className="collection-supply">
+            <p>Supply: 4261</p>
           </div>
         </div>
-      <p className="introduction-description">013 origin 1/1 art series by @0xdailymint</p>
       </div>
-      <div className="collection-stats-container">
-        <div className="collection-floor-price">
-          <FloorPrice floorPrice={floorPrice} />
-        </div>
-        <div className="collection-supply">
-          <p>Supply: TBA</p>
-        </div>
-      </div>
-    </div>
       <div className="container-products">
         {inventory.map((item) => (
           <Link
             to={{
-              pathname: `/collections/visages_club/${item.title.replace(/\s+/g, "").trim()}`,
+              pathname: `/collections/the_herd/${item.title.replace(/\s+/g, "").trim()}`,
             }}
             key={item.id}
           >
@@ -70,7 +76,7 @@ return (
                 </div>
                 <div className="info">
                   <p>{item.title}</p>
-                  <p>Prix : {item.price} $</p>
+                  <p>Price : {item.price} $</p>
                 </div>
               </div>
               <div className="back-card"></div>

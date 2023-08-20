@@ -33,42 +33,42 @@ function App() {
             <Route exact path="/collections" component={Collections} />
             <Route
               exact
-              path="/collections/stoned_ape_crew"
+              path="/collections/brozo"
               component={SACProducts}
             />
             <Route
               exact
-              path="/collections/stoned_ape_crew/:id"
+              path="/collections/brozo/:id"
               component={SACProductShowcase}
             />
             <Route
               exact
-              path="/collections/degen_dummies"
+              path="/collections/drill_club"
               component={DDProducts}
             />
             <Route
               exact
-              path="/collections/degen_dummies/:id"
+              path="/collections/drill_club/:id"
               component={DDProductShowcase}
             />
             <Route
               exact
-              path="/collections/famous_fox_federation"
+              path="/collections/polygonmonkeys"
               component={FFFProducts}
             />
             <Route
               exact
-              path="/collections/famous_fox_federation/:id"
+              path="/collections/polygonmonkeys/:id"
               component={FFFProductShowcase}
             />
             <Route
               exact
-              path="/collections/visages_club"
+              path="/collections/the_herd"
               component={VCProducts}
             />
             <Route
               exact
-              path="/collections/visages_club/:id"
+              path="/collections/the_herd/:id"
               component={VCProductShowcase}
             />
             <Route exact path="/privacy-policy" component={PrivacyPolicy} />

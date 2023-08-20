@@ -4,7 +4,6 @@ const express = require("express");
 const axios = require("axios");
 const path = require("path");
 const bodyParser = require("body-parser");
-const { createProxyMiddleware } = require("http-proxy-middleware");
 const stripe = require("stripe")("sk_test_51MMa6iLrVEr2jlD62PUpgyZsl82H07ZTPkwyaOz59IHFID0hI4yKBNwtcJWOO37axD3TtaZj3pifexpDbAhzEqte00fjB4cBiE");
 require("dotenv").config();
 const app = express();
@@ -36,21 +35,25 @@ mongoose
 
 // Routes --------------------------------
 
-app.get("/api/floorPrices/:collectionName", async (req, res) => {
+app.get("/api/floorPrices/:contractAddress", async (req, res) => {
+  console.log("Route /api/floorPrices/ called with contract address:", req.params.contractAddress);
   try {
-    const collectionName = req.params.collectionName;
-    const response = await fetch(
-      "https://api-mainnet.magiceden.dev/v2/collections/" + collectionName + "/stats"
-    );
-    const data = await response.json();
-    const floorPrice = data.floorPrice;
-    res.send({ collectionName, floorPrice });
+    const contractAddress = req.params.contractAddress;
+    const response = await axios.get(`https://polygonapi.nftscan.com/api/v2/collections/${contractAddress}`, {
+      headers: {
+        'X-API-KEY': 'UpHv9E2zqy9TValq6VhoRUXd'
+      }
+    });
+
+    const floorPrice = response.data.data.floor_price;
+    console.log("Route /api/floorPrices/ called with contract address:", req.params.contractAddress);
+    res.send({ contractAddress, floorPrice });
+
   } catch (error) {
     console.error(error);
     res.status(500).send("Error fetching data from API");
   }
 });
-
 
 app.get('/success', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
@@ -92,16 +95,6 @@ app.post("/checkout", async (req, res) => {
   }));
 
 });
-
-// Proxy middleware --------------------------------
-
-app.use(
-  "/api/floorPrices/",
-  createProxyMiddleware({
-    target: "https://api-mainnet.magiceden.dev",
-    changeOrigin: true,
-  })
-);
 
 // Default route --------------------------------
 

@@ -22,13 +22,13 @@ function Home() {
             Get customized merchandise with your favorite NFT thanks to our all-in-one platform. We take care of everything.
           </p>
           <ul>
-            <li><i class="fa-solid fa-chevron-right"></i>Easy</li>
-            <li><i class="fa-solid fa-chevron-right"></i>Fast</li>
-            <li><i class="fa-solid fa-chevron-right"></i>Best Quality</li>
+            <li><i className="fa-solid fa-chevron-right"></i>Easy</li>
+            <li><i className="fa-solid fa-chevron-right"></i>Fast</li>
+            <li><i className="fa-solid fa-chevron-right"></i>Best Quality</li>
           </ul>
-          <div class="button-l">
+          <div className="button-l">
             <a href='/Collections'>
-              <button class="btn-hero-banner">Start Now</button>
+              <button className="btn-hero-banner">Start Now</button>
             </a>
           </div>
         </div>
@@ -42,23 +42,23 @@ function Home() {
         </div>
         <div className="partner-container">
           <div className="large-project partner-icon">
-            <img src="./images/logo-dd.webp" alt="" />
-            <h3>Degen Dummies</h3>
+            <img className='gray-icon'src="./images/logo-drillclub.webp" alt="" />
+            <h3>Drill Club</h3>
             <a href="https://twitter.com/degendummies" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
           <div className="large-project partner-icon">
-            <img src="./images/logo-sac.webp" alt="" />
-            <h3>Stoned Ape Crew</h3>
+            <img className='gray-icon'src="./images/logo-brozo.webp" alt="" />
+            <h3>Brozo</h3>
             <a href="https://twitter.com/StonedApeCrew" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
           <div className="large-project partner-icon">
-            <img className='gray-icon' src="./images/fff-logo1.webp" alt="" />
-            <h3>Famous Fox Federation</h3>
+            <img className='gray-icon' src="./images/logo-polygonmonkeys.webp" alt="" />
+            <h3>PolygonMonkeys</h3>
             <a href="https://twitter.com/OryonMerch" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
           <div className="large-project partner-icon">
-            <img className='gray-icon' src="./images/logo-vc.webp" alt="" />
-            <h3>Visages Club</h3>
+            <img className='gray-icon' src="./images/logo-theherd.webp" alt="" />
+            <h3>The Herd</h3>
             <a href="https://twitter.com/visagesclub" target="_blank" rel="noreferrer"><i className="fab fa-twitter twitter"></i></a>
           </div>
         </div>

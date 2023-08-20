@@ -1,30 +1,30 @@
 [
   {
-    "title": "Degen Dummies",
-    "bannerImgSrc": "./images/img1.webp",
-    "logoImgSrc": "./images/dd-logo.webp",
-    "link": "/collections/degen_dummies",
-    "previewImgSrc": "./images/18751.webp"
+    "title": "Drill Club",
+    "bannerImgSrc": "./images/banner-drillclub.webp",
+    "logoImgSrc": "./images/logo-drillclub.webp",
+    "link": "/collections/drill_club",
+    "previewImgSrc": "./images/nft-drillclub.webp"
   },
   {
-    "title": "Famous Fox Federation",
-    "bannerImgSrc": "./images/img2.webp",
-    "logoImgSrc": "./images/fff-logo.webp",
-    "link": "/collections/famous_fox_federation",
-    "previewImgSrc": "./images/27131.webp"
+    "title": "PolygonMonkeys",
+    "bannerImgSrc": "./images/banner-polygonmonkeys.webp",
+    "logoImgSrc": "./images/logo-polygonmonkeys.webp",
+    "link": "/collections/polygonmonkeys",
+    "previewImgSrc": "./images/nft-polygonmonkeys.webp"
   },
   {
-    "title": "Stoned Ape Crew",
-    "bannerImgSrc": "./images/img8.webp",
-    "logoImgSrc": "./images/logo-sac.webp",
-    "link": "/collections/stoned_ape_crew",
-    "previewImgSrc": "./images/nft-sac.webp"
+    "title": "Brozo",
+    "bannerImgSrc": "./images/banner-brozo.webp",
+    "logoImgSrc": "./images/logo-brozo.webp",
+    "link": "/collections/brozo",
+    "previewImgSrc": "./images/nft-brozo.webp"
   },
   {
-    "title": "Visages Club",
-    "bannerImgSrc": "./images/img7.webp",
-    "logoImgSrc": "./images/logo-vc.webp",
-    "link": "/collections/visages_club",
-    "previewImgSrc": "./images/nft-visages.webp"
+    "title": "The Herd",
+    "bannerImgSrc": "./images/banner-theherd.webp",
+    "logoImgSrc": "./images/logo-theherd.webp",
+    "link": "/collections/the_herd",
+    "previewImgSrc": "./images/nft-theherd.webp"
   }
 ]

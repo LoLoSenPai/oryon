@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Footer.css";
-import myLogo from "../../images/Logo-SVG.svg";
+import myLogo from "../../images/logo.svg";
 
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="row">
           <div className="col col-left">
             <img className='logo-footer' src={imgUrl} alt="logo" />
-            <p>&copy; Oryon co.</p>
+            <p>&copy; Ogronex</p>
             <p>All rights reserved</p>
             <div className="social-icons partner-icon social-icons-mobile">
               <a href="https://discord.gg/fRgWtfj2wd" target="_blank" rel="noreferrer"><i className="fab fa-discord discord"></i></a>

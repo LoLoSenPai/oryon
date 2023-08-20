@@ -7,12 +7,12 @@ export default function Logo() {
     <div className="logo-container">
       <div className="main-logo">
         <Link to="/">
-          <img src="./images/Logo-SVG.svg" alt="logo-large" />
+          <img src="./images/logo.svg" alt="logo-large" />
         </Link>
       </div>
       <div className="small-logo">
         <Link to="/">
-          <img src="./images/Icon-SVG.svg" alt="logo-small" />
+          <img src="./images/logo.svg" alt="logo-small" />
         </Link>
       </div>
     </div>
